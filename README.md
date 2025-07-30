@@ -40,7 +40,9 @@ git clone https://github.com/yourname/fastapi-aws-mail.git
 cd fastapi-aws-mail
 ```
 ### 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Create a .env file
 ```
@@ -61,15 +63,18 @@ uvicorn app:app --reload
 # ▶️ POST /send-email
 Sends an email via AWS SES.
 - 📥 Request Body (JSON)
-```json
+```
 {
   "to": "recipient@example.com",
   "subject": "Welcome",
   "body": "<h1>Hello from FastAPI</h1>",
   "from_email": "optional@yourdomain.com"
 }
-```	
+```
+
+
 - 📤 Sample cURL Request
+
 ```bash
 curl -X POST http://localhost:8000/send-email \
   -H "Content-Type: application/json" \
@@ -100,22 +105,22 @@ Or use Postman/curl with the sample payload above
 ## 🌐 Deployment Suggestions
 You can deploy the app to:
 
-Render.com (free-tier hosting)
+- Render.com (free-tier hosting)
 
-AWS EC2 / Lightsail
+- AWS EC2 / Lightsail
 
-Railway.app / Vercel / Fly.io
+- Railway.app / Vercel / Fly.io
 
-Docker (optional Dockerfile can be added)
+- Docker (optional Dockerfile can be added)
 
 ## 🛑 Important Notes
 In SES Sandbox Mode:
 
-Both from and to emails must be verified.
+- Both from and to emails must be verified.
 
-To send to unverified users, request production access from AWS.
+- To send to unverified users, request production access from AWS.
 
-Ensure your .env is not committed to version control.
+- Ensure your .env is not committed to version control.
 
 ## 🙋‍♂️ Need Help?
 Open an issue or reach out at yourname@example.com.
